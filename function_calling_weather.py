@@ -82,11 +82,11 @@ print("\n")
 print(initial_response.choices[0].message.function_call.arguments)
 print("\n")
 
-# function_argument = json.loads(initial_response.choices[0].message.function_call.arguments)
-# location = function_argument['location']
+function_argument = json.loads(initial_response.choices[0].message.function_call.arguments)
+location = function_argument['location']
 
-# if (location):
-#     print(f"city: {location}")
-#     get_weather(location)
+if (location):
+    print(f"city: {location}")
+    get_weather(location)
 
 
